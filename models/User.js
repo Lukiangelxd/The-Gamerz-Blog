@@ -27,7 +27,6 @@ User.init(
                 len: [8],
             }
         },
-
         email: {
             type: DataTypes.INTEGER,
             allowNull: false,
@@ -37,6 +36,7 @@ User.init(
             },
         },
     },
+    
     {
         hooks: {
             beforeCreate: async (newUserData) => {
