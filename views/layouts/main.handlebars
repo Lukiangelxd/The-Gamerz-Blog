@@ -5,17 +5,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Gamerz Blog</title>
-  <link rel="stylesheet" href="/public/css/sass.css">
-  <
+  <link rel="stylesheet" href="/public/scss/main.css">
 </head>
 
 <body>
-  <header class="display-flex justify-space-between align-center p-2">
+  <header>
     <img class="logo-nav"src="/The-Gamerz-Blog/public/img/logo copy.jpg">
     <h1>
       The Gamerz Blog
     </h1>
-  </header
+  </header>
   <nav>
     <ul class="navbar">
         <li><a href="/views/homepage.handlebars">Home</a></li>
@@ -27,18 +26,17 @@
                 <li><a href="/views/pcgaming.handlebars">PC Gaming</a></li>
                 <li><a href="/views/nintendo.handlebars">Nintendo</a></li>
                 <li><a href="/views/xbox.handlebars">Xbox</a></li>
-            </ul>
+            </ul></li>
         <li><a href="/views/profile.handlebars">Profile</a></li>
         <li><a href="/views/aboutpage.handlebars">About</li>
         </li>
     </ul>
   </nav>
-  <main class="container container-fluid mt-5">
+  <main>
     <!-- Render the contents of the sub layout here -->
     {{{ body }}}
   </main>
   <footer>  
   </footer>
 </body>
-
 </html>
