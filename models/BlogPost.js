@@ -11,6 +11,10 @@ BlogPost.init(
             primaryKey: true,
             autoIncrement: true,
         },
+        title: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
         post: {
             type: DataTypes.STRING,
             allowNull: false,
@@ -18,7 +22,10 @@ BlogPost.init(
         tags: {
             type: DataTypes.STRING,
         },
-
+        //This is likely to be dealt with via a drop down menu.
+        platform_id: {
+            type: DataTypes.INTEGER,
+        },
         user_id: {
             type: DataTypes.INTEGER,
             references: {
