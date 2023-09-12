@@ -1,6 +1,5 @@
 const router = require('express').Router();
 const{ BlogPost, User, Comment} = require('../models')
-
 const withAuth = require('../helpers/auth');
 
 //Get Request to access the homepage.
