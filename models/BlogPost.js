@@ -22,7 +22,6 @@ BlogPost.init(
         tags: {
             type: DataTypes.STRING,
         },
-        //This is likely to be dealt with via a drop down menu.
         platform_id: {
             type: DataTypes.INTEGER,
         },
