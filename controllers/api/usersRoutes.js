@@ -46,6 +46,7 @@ router.post('/signup', async (req, res )=> {
       };
 })
 
+// Delete Route to remove a User.
 router.delete('/:user_id', (req, res) =>{
   if(req.params.user_id === req.session.user_id) {
    User.destroy({

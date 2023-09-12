@@ -1,6 +1,6 @@
 const router = require('express').Router();
 // Bring in proper model for each gaming route
-// Implement authorization to post/comment?
+// Implement authorization to make a post/comment?
 router.get('/nintendo', (req, res) => {
   res.render('nintendo');
 });
