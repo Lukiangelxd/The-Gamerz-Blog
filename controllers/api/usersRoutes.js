@@ -57,15 +57,20 @@ router.post('/signup', async (req, res )=> {
 })
 
 router.delete('/:user_id', (req, res) =>{
-  User.destroy({
-    where: {
-      user_id: req.params.user_id
-    }
-  })
-  .then((deletedUser) => {
-    res.json(deletedUser);
-  })
-  .catch((err) => res.json(err))
+  if(req.params.user_id === req.session.user_id) {
+   User.destroy({
+     where: {
+       user_id: req.params.user_id
+     }
+   })
+   .then((deletedUser) => {
+     res.json(deletedUser);
+   })
+   .catch((err) => res.json(err));
+   }
+   else{
+    res.status(400).json("Error! Can not delete another user!");
+   }
 })
 
 router.post('/logout', (req, res) => {

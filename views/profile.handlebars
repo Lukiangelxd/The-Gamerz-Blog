@@ -1,1 +1,24 @@
 <!--Grey-->
+<section>
+    <h1>{{{user.name}}}</h1>
+    <h2> Blog Posts </h2>
+            {{!-- all the blogs --}}
+    {{#each user.blogposts as |blogpost|}}
+    <div>
+        {{{blogpost.title}}}
+        <div>
+            {{{blogpost.post}}}
+        </div>
+    </div>
+    {{/each}}
+    <h2> Comments </h2>
+            {{!-- all the comments --}}
+    {{#each user.comments as |comment|}}
+    <div>
+        {{{comment.blog_post_id}}}
+        <div>
+            {{{comment.comment}}}
+        </div>
+    </div>
+    {{/each}}
+</section>

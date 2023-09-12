@@ -1,8 +1,16 @@
-const router = require("express").Router();
+const router = require('express').Router();
 // Bring in proper model for each gaming route
-// Impliment authroization
-router.get("/nintendo", (req, res) => {
-  res.render("nintendo");
+// Implement authorization
+router.get('/nintendo', (req, res) => {
+  res.render('nintendo');
 });
-
+router.get('/playstat', (req, res) => {
+  res.render('playstat');
+});
+router.get('/pcgaming', (req, res) => {
+  res.render('pcgaming');
+});
+router.get('/xbox', (req, res) => {
+  res.render('xbox');
+});
 module.exports = router;
