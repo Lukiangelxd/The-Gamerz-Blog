@@ -61,9 +61,9 @@ const homeDirect = async () => {
   };
 
   document.querySelector('.home-btn').addEventListener('click', homeDirect);
-  document.querySelector('#profile').addEventListener('click', profileDirect);
-  document.querySelector('#about').addEventListener('click', aboutDirect);
-  document.querySelector('#nintendo').addEventListener('click', nintendoDirect);
-  document.querySelector('#pcgaming').addEventListener('click', pcDirect);
-  document.querySelector('#playstat').addEventListener('click', playDirect);
-  document.querySelector('#xbox').addEventListener('click', xboxDirect);
+  document.querySelector('.profile-btn').addEventListener('click', profileDirect);
+  document.querySelector('.about-btn').addEventListener('click', aboutDirect);
+  document.querySelector('.nintendo-btn').addEventListener('click', nintendoDirect);
+  document.querySelector('.pcgaming-btn').addEventListener('click', pcDirect);
+  document.querySelector('.playstat-btn').addEventListener('click', playDirect);
+  document.querySelector('.xbox-btn').addEventListener('click', xboxDirect);
