@@ -1,10 +1,4 @@
 /* Reset some default browser styles */
-body, ul, li {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
 /* Set variables for common colors and fonts */
 /* Apply variables to specific elements */
 body {
