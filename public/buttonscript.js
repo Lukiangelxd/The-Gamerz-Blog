@@ -1,63 +1,106 @@
+//Get Request for Home Button.
 const homeDirect = async () => {
+  console.log("Home Button Clicked!");
     const response = await fetch('/', {
       method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      },
     });
-    if (!response.ok) {
+    if (response.ok) {
+      }
+      else {
         alert(response.statusText);
       }
   };
   
   const profileDirect = async () => {
+    console.log("Profile Button Clicked!");
     const response = await fetch('/profile', {
       method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      },
     });
-    if (!response.ok) {
-        alert(response.statusText);
-      }
+    if (response.ok) {
+    }
+    else {
+      alert(response.statusText);
+    }
   };
 
   const aboutDirect = async () => {
+    console.log("About Button Clicked!");
     const response = await fetch('/about', {
       method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      },
     });
-    if (!response.ok) {
-        alert(response.statusText);
-      }
+    if (response.ok) {
+    }
+    else {
+      alert(response.statusText);
+    }
   };
   const nintendoDirect = async () => {
+    console.log("Nintendo Button Clicked!");
     const response = await fetch('/gaming/nintendo', {
       method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      },
     });
-    if (!response.ok) {
-        alert(response.statusText);
-      }
+    if (response.ok) {
+    }
+    else {
+      alert(response.statusText);
+    }
   };
 
   const pcDirect = async () => {
+    console.log("PC Button Clicked!");
     const response = await fetch('/gaming/pcgaming', {
       method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      },
     });
-    if (!response.ok) {
-        alert(response.statusText);
-      }
+    if (response.ok) {
+    }
+    else {
+      alert(response.statusText);
+    }
   };
 
   const playDirect = async () => {
+    console.log("Play Button Clicked!");
     const response = await fetch('/gaming/playstat', {
       method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      },
     });
-    if (!response.ok) {
-        alert(response.statusText);
-      }
+    if (response.ok) {
+    }
+    else {
+      alert(response.statusText);
+    }
   };
 
   const xboxDirect = async () => {
+    console.log("Xbox Button Clicked!");
     const response = await fetch('/gaming/xbox', {
       method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      },
     });
-    if (!response.ok) {
-        alert(response.statusText);
-      }
+    if (response.ok) {
+    }
+    else {
+      alert(response.statusText);
+    }
   };
 
   document.querySelector('.home-btn').addEventListener('click', homeDirect);
