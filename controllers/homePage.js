@@ -2,8 +2,8 @@ const router = require('express').Router();
 const{ BlogPost, User, Comment} = require('../models')
 const withAuth = require('../helpers/auth');
 
-//Get Request to access the homepage.
-router.get('/',withAuth, async(req,res)=> {
+//Get Request to access the Homepage.
+router.get('/', async(req,res)=> {
     try{
 
         const blogData = await BlogPost.findAll({
