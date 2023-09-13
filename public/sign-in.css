@@ -23,3 +23,12 @@ body {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
+ /* Homepage scss Text Editor */
+ .text-editor {
+  display: none;
+  width: 500px;
+}
+.button{
+    color: red;
+    font-size: 40px;
+}
