@@ -1,46 +1,57 @@
 [
     {
         "comment": "Stop playing the hard ones then.",
+        "user_id": 3,
         "blog_post_id": 1
     },
     {
         "comment": "Looks pretty nice. Have you tried gluing electric stuff on?",
+        "user_id": 1,
         "blog_post_id": 2
     },
     {
         "comment": "Wanna know too.",
+        "user_id": 5,
         "blog_post_id": 3
     },
     {
         "comment": "...This is empty?",
+        "user_id": 2,
         "blog_post_id": 4
     },
     {
         "comment": "Someone posts what games they've 100%'d. It's empty. LOL",
+        "user_id": 5,
         "blog_post_id": 4
     },
     {
         "comment": "Might want to just get a new one.",
+        "user_id": 3,
         "blog_post_id": 5
     },
     {
         "comment": "Depends on what you like honestly.",
+        "user_id": 2,
         "blog_post_id": 6
     },
     {
         "comment": "Git Gud",
+        "user_id": 4,
         "blog_post_id": 7
     },
     {
         "comment": "Take it slow, and be patient.",
+        "user_id": 5,
         "blog_post_id": 7
     },
     {
         "comment": "Up to you.",
+        "user_id": 1,
         "blog_post_id": 8
     },
     {
         "comment": "This is a test comment, because I ran out of comment ideas.",
+        "user_id": 2,
         "blog_post_id": 8
     }
 ]
