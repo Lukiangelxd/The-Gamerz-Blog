@@ -24,9 +24,9 @@ router.get('/', async(req,res)=> {
 
 
 //Get Request for the profile page.
-router.get('/profile', withAuth, async (req,res) => {
+router.get('/profile:id', async (req,res) => {
     try{
-        const userData = await User.findByPk(req.session.user_id, {
+        const userData = await User.findByPk(req.params.id, {
             include: [
                 {
                     model: BlogPost,
@@ -39,14 +39,14 @@ router.get('/profile', withAuth, async (req,res) => {
             ]
         });
         const user = userData.get({ plain: true });
-        res.render('homepage',{user});
+        res.render('profile',{user});
     }catch (err) {
         res.status(500).json(err)
     };
 })
 
 //Get Request for the about page.
-router.get("/about", (req, res) => {
+router.get('/about', (req, res) => {
     res.render('aboutpage');
   });
 

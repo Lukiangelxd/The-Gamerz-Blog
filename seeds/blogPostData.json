@@ -1,7 +1,7 @@
 [
     {
         "title": "Mario Maker is too difficult.",
-        "subheading": "They overdid it!",
+        "sub_heading": "They overdid it!",
         "post": "See Title",
         "tags": "Hard",
         "platform_id": 1,
@@ -9,7 +9,7 @@
     },
     {
         "title": "Look at what I made in ToTK!",
-        "subheading": "My Engineering is unparalleled!",
+        "sub_heading": "My Engineering is unparalleled!",
         "post": "Look!",
         "tags": "Built",
         "platform_id": 1,
@@ -17,7 +17,7 @@
     },
     {
         "title": "Next Sale When?",
-        "subheading": "Been a dry period of big sales.",
+        "sub_heading": "Been a dry period of big sales.",
         "post": "My wallet's looking a little full...",
         "tags": "Sale",
         "platform_id": 2,
@@ -25,7 +25,7 @@
     },
     {
         "title": "100% Completion Game Listings.",
-        "subheading": "Gaze upon my works ye Mighty.",
+        "sub_heading": "Gaze upon my works ye Mighty.",
         "post": "See how many I've completed?",
         "tags": "100%",
         "platform_id": 2,
@@ -33,7 +33,7 @@
     },
     {
         "title": "How do I fix my controller?",
-        "subheading": "Google didn't help.",
+        "sub_heading": "Google didn't help.",
         "post": "My right thumb stick is stuck going right slightly.",
         "tags": "Suggest",
         "platform_id": 3,
@@ -41,7 +41,7 @@
     },
     {
         "title": "Never played Playstation before. Game Suggestions?",
-        "subheading": "Able to buy, unsure what.",
+        "sub_heading": "Able to buy, unsure what.",
         "post": "Anything is helpful. Thanks!",
         "tags": "Suggest",
         "platform_id": 3,
@@ -49,7 +49,7 @@
     },
     {
         "title": "Why is this game so hard!!!!",
-        "subheading": "WHO BAlANCED THIS",
+        "sub_heading": "WHO BAlANCED THIS",
         "post": "YOU CANT DODGE ANYTHING, AND NONE OF THE CONTROLS WORK HALF THE TIME",
         "tags": "Hard",
         "platform_id": 4,
@@ -57,7 +57,7 @@
     },
     {
         "title": "Are the free games worth buying the pass for?",
-        "subheading": "No one to play with",
+        "sub_heading": "No one to play with",
         "post": "I know they're cheaper this way, but they're also kinda old, and I don't know if I'd even want them.",
         "tags": "Sale",
         "platform_id": 4,
