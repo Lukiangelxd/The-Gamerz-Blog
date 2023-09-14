@@ -6,10 +6,9 @@ body, ul, li {
 }
 
 /* Set variables for common colors and fonts */
-$background-color: #f0f0f0;
+$background-color: #dad0d0;
 $header-background: #333;
 $header-text-color: #fff;
-$nav-background: #d153df;
 $nav-text-color: #fff;
 $dropdown-background: #333;
 $dropdown-hover-background: #555;
@@ -19,7 +18,16 @@ $footer-text-color: #fff;
 $font-family: Arial, sans-serif;
 $font-size: 24px;
 
-
+/* Moving the logo closer to the middle */
+#logo-nav {
+    width: 100px; /* Adjust the width as needed */
+    height: auto;
+    border-left-width: 20px;
+    border-right-width: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+    align-items: center;
+  }
 
 /* Apply variables to specific elements */
 body {
