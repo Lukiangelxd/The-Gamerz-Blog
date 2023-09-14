@@ -1,65 +1,38 @@
 /* Reset some default browser styles */
 /* Set variables for common colors and fonts */
 /* Apply variables to specific elements */
+
+/* main.handlebars */
 body {
-  background-color: #f0f0f0;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  background-color: #dad0d0;
+  font-family:'Times New Roman', Times, serif;
 }
 
-header {
-  background-color: #f0f0f0;
-  color: #fff;
-  padding: 10px 20px;
-  display: flex;
-  justify-content: space-between;
+/* Moving the logo closer to the middle */
+#logo-nav {
+  width: 100px; /* Adjust the width as needed */
+  height: auto;
+  border-left-width: 20px;
+  border-right-width: 20px;
+  margin-right: 20px;
+  margin-left: 20px;
   align-items: center;
 }
+#navbar {
+  background-image: linear-gradient(rgb(135, 88, 129), rgb(252, 189, 255));
 
-.logo-nav {
-  width: 50px; /* Adjust the width as needed */
-  height: auto;
-  margin-right: 10px;
 }
+.nav-link
+  .box:hover {
+    box-shadow: 0 0 11px rgb(0, 0, 0); 
+}
+#navbarItems {
+  justify-content: space-around;
+  font-size: 30px;
+  margin: 20px;
 
-h1 {
-  font-size: 10px;
+    
 }
-
-nav {
-  background-color: #444;
-  padding: 10px;
-}
-nav .navbar {
-  display: flex;
-  justify-content: space-between;
-  padding: 0;
-  list-style: none;
-}
-nav .navbar li {
-  margin-right: 20px;
-  position: relative;
-}
-nav .navbar li:hover .dropdown_content {
-  display: block;
-}
-nav .navbar .nav_dropdown .dropdown_content {
-  display: none;
-  position: absolute;
-  top: 100%;
-  background-color: #333;
-  min-width: 150px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-}
-nav .navbar .nav_dropdown .dropdown_content li a {
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  color: #fff;
-}
-nav .navbar .nav_dropdown .dropdown_content li a:hover {
-  background-color: #555;
-}
-
 .container {
   background-color: #f0f0f0;
   padding: 20px;
@@ -72,3 +45,20 @@ footer {
   text-align: center;
   padding: 10px;
 }/*# sourceMappingURL=main.css.map */
+
+/* Homepage.handlebars */
+
+h1-homepage {
+  font-size: 10px;
+  color: coral;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+header {
+  background-color: #f0f0f0;
+  color: #000000;
+  text-shadow: #333;
+  padding: 10px 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
