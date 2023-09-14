@@ -15,6 +15,10 @@ BlogPost.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
+        sub_heading: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
         post: {
             type: DataTypes.STRING,
             allowNull: false,
