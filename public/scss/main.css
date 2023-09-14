@@ -3,9 +3,25 @@
 /* Apply variables to specific elements */
 
 /* main.handlebars */
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+html {
+  box-sizing: border-box;
+}
+
 body {
-  background-color: #dad0d0;
+  background-color: #fefefe;
   font-family:'Times New Roman', Times, serif;
+  margin: 0;
+}
+#main-container {
+  max-width: 1200px; 
+  margin: 0 auto; 
+  padding: 20px; 
+  background-color: #ededed; 
+  box-shadow: 5px 5px 9px #0000005f;
 }
 
 /* Moving the logo closer to the middle */
@@ -18,9 +34,9 @@ body {
   margin-left: 20px;
   align-items: center;
 }
+/* Nav Bar add ons */
 #navbar {
   background-image: linear-gradient(rgb(135, 88, 129), rgb(252, 189, 255));
-
 }
 .nav-link
   .box:hover {
@@ -30,15 +46,7 @@ body {
   justify-content: space-around;
   font-size: 30px;
   margin: 20px;
-
-    
 }
-.container {
-  background-color: #f0f0f0;
-  padding: 20px;
-  border-radius: 5px;
-}
-
 footer {
   background-color: #333;
   color: #fff;
@@ -46,19 +54,80 @@ footer {
   padding: 10px;
 }/*# sourceMappingURL=main.css.map */
 
-/* Homepage.handlebars */
 
-h1-homepage {
+
+/* Homepage.handlebars */
+#h1-homepage {
   font-size: 10px;
   color: coral;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
-header {
-  background-color: #f0f0f0;
-  color: #000000;
-  text-shadow: #333;
-  padding: 10px 10px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+
+
+
+/* About Page */
+body {
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.main-container {
+      max-width: 1200px; 
+      margin: 0 auto; 
+      padding: 20px; 
+      background-color: #d9cce1; 
+      box-shadow: 5px 5px 9px #0000005f;
+    }
+
+.about-h1 {
+  text-shadow: 5px 5px 9px #000000;
+}
+/* Ensuring it can fit all 4 on larger screens */
+.column {
+  float: left;
+  width: 50%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+/*For all Developers  */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #695a80;
+  box-shadow: 5px 5px 9px #00000052;
+  color: white;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
 }
