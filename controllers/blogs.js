@@ -74,7 +74,7 @@ router.get('/pcgaming', withAuth, async(req, res) => {
     }
 })
 
-router.get('/nintendo', withAuth, async(req, res) => {
+router.get('/nintendo', async(req, res) => {
     try{
         const blogData = await BlogPost.findAll({
             where: {platform_id: 1},
@@ -85,12 +85,16 @@ router.get('/nintendo', withAuth, async(req, res) => {
                 },
                 {
                     model: Comment,
-                    attributes: ['comment']
+                    attributes: ['comment','user_id'],
+                    include: [
+                        {
+                            model: User,
+                            attributes: ['name']
+                        }]
                 }
             ]
         });
         const blogs = blogData.map((blog) => blog.get({plain: true}))
-
         res.render('nintendo',{blogs})
 
     }catch(err) {
