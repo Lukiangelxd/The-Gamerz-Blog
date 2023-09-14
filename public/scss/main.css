@@ -43,9 +43,10 @@ body {
     box-shadow: 0 0 11px rgb(0, 0, 0); 
 }
 #navbarItems {
-  justify-content: space-around;
+  justify-content: center;
   font-size: 30px;
   margin: 20px;
+
 }
 footer {
   background-color: #333;
