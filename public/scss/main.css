@@ -4,7 +4,9 @@
 
 /* main.handlebars */
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 html {
@@ -13,14 +15,14 @@ html {
 
 body {
   background-color: #fefefe;
-  font-family:'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
   margin: 0;
 }
 #main-container {
-  max-width: 1200px; 
-  margin: 0 auto; 
-  padding: 20px; 
-  background-color: #ededed; 
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ededed;
   box-shadow: 5px 5px 9px #0000005f;
 }
 
@@ -36,26 +38,22 @@ body {
 }
 /* Nav Bar add ons */
 #navbar {
-  background-image: linear-gradient(rgb(135, 88, 129), rgb(252, 189, 255));
+  background-image: linear-gradient(rgb(161, 158, 160), rgb(240, 237, 240));
 }
-.nav-link
-  .box:hover {
-    box-shadow: 0 0 11px rgb(0, 0, 0); 
+.nav-link .box:hover {
+  box-shadow: 0 0 11px rgb(0, 0, 0);
 }
 #navbarItems {
   justify-content: center;
   font-size: 30px;
   margin: 20px;
-
 }
 footer {
   background-color: #333;
   color: #fff;
   text-align: center;
   padding: 10px;
-}/*# sourceMappingURL=main.css.map */
-
-
+} /*# sourceMappingURL=main.css.map */
 
 /* Homepage.handlebars */
 #h1-homepage {
@@ -64,33 +62,33 @@ footer {
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
-
-
 /* About Page */
 body {
   margin: 0;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
 .main-container {
-      max-width: 1200px; 
-      margin: 0 auto; 
-      padding: 20px; 
-      background-color: #d9cce1; 
-      box-shadow: 5px 5px 9px #0000005f;
-      height: 100%;
-    }
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #d9cce1;
+  box-shadow: 5px 5px 9px #0000005f;
+  height: 100%;
+}
 
 .about-h1 {
   text-shadow: 5px 5px 9px #000000;
 }
 .aboutH2 {
   text-shadow: 5px 5px 9px #000000;
-  padding:50px;
-  margin:0
+  padding: 50px;
+  margin: 0;
 }
 /* Ensuring it can fit all 4 on larger screens */
 .column {
@@ -114,7 +112,8 @@ body {
 .container {
   padding: 0 16px;
 }
-.container::after, .row::after {
+.container::after,
+.row::after {
   content: "";
   clear: both;
   display: table;
@@ -125,14 +124,14 @@ body {
 #linkGitHub {
   margin-bottom: 10px;
   font-weight: bold;
-  color: #333; 
+  color: #333;
   text-decoration: none; /* Remove underlines */
   transition: color 0.3s;
   margin-bottom: 10px;
-  }
-  
-  #linkGitHub:hover {
-    color: #007bff;
+}
+
+#linkGitHub:hover {
+  color: #007bff;
 }
 
 @media screen and (max-width: 650px) {
@@ -149,4 +148,10 @@ body {
   font-weight: bold; /* Make the text bold */
   font-size: 36px;
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5); /* Add a shadow effect */
+  text-align: center;
+}
+.nintendoContainer {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
 }
