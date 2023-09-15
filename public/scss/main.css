@@ -71,10 +71,6 @@ body {
   margin: 0;
 }
 
-html {
-  box-sizing: border-box;
-}
-
 *, *:before, *:after {
   box-sizing: inherit;
 }
@@ -85,10 +81,16 @@ html {
       padding: 20px; 
       background-color: #d9cce1; 
       box-shadow: 5px 5px 9px #0000005f;
+      height: 100%;
     }
 
 .about-h1 {
   text-shadow: 5px 5px 9px #000000;
+}
+.aboutH2 {
+  text-shadow: 5px 5px 9px #000000;
+  padding:50px;
+  margin:0
 }
 /* Ensuring it can fit all 4 on larger screens */
 .column {
@@ -102,7 +104,6 @@ html {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   margin: 8px;
 }
-
 .about-section {
   padding: 50px;
   text-align: center;
@@ -110,21 +111,29 @@ html {
   box-shadow: 5px 5px 9px #00000052;
   color: white;
 }
-
 .container {
   padding: 0 16px;
 }
-
 .container::after, .row::after {
   content: "";
   clear: both;
   display: table;
 }
-
 .title {
   color: grey;
 }
-
+#linkGitHub {
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #333; 
+  text-decoration: none; /* Remove underlines */
+  transition: color 0.3s;
+  margin-bottom: 10px;
+  }
+  
+  #linkGitHub:hover {
+    color: #007bff;
+}
 
 @media screen and (max-width: 650px) {
   .column {
