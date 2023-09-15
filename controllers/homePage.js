@@ -22,6 +22,11 @@ router.get('/', async(req,res)=> {
     }
 });
 
+//Get Request to access the Posting page.
+// Move this later. It's only here for testing purposes. - Conal.
+router.get('/posting', async(req,res)=> {
+        res.render('posting');
+});
 
 //Get Request for the profile page.
 router.get('/profile:id', async (req,res) => {
