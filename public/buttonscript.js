@@ -1,3 +1,4 @@
+
 //Get Request for Home Button.
 const homeDirect = async () => {
   console.log("Home Button Clicked!");
@@ -8,6 +9,7 @@ const homeDirect = async () => {
       },
     });
     if (response.ok) {
+      document.location.replace('/')
       }
       else {
         alert(response.statusText);
@@ -23,6 +25,7 @@ const homeDirect = async () => {
       },
     });
     if (response.ok) {
+
     }
     else {
       alert(response.statusText);
@@ -38,6 +41,7 @@ const homeDirect = async () => {
       },
     });
     if (response.ok) {
+      document.location.replace('/about')
     }
     else {
       alert(response.statusText);
@@ -45,13 +49,14 @@ const homeDirect = async () => {
   };
   const nintendoDirect = async () => {
     console.log("Nintendo Button Clicked!");
-    const response = await fetch('/gaming/nintendo', {
+    const response = await fetch('/blogs/nintendo', {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
       },
     });
     if (response.ok) {
+      document.location.replace('/blogs/nintendo')
     }
     else {
       alert(response.statusText);
@@ -60,13 +65,14 @@ const homeDirect = async () => {
 
   const pcDirect = async () => {
     console.log("PC Button Clicked!");
-    const response = await fetch('/gaming/pcgaming', {
+    const response = await fetch('/blogs/pcgaming', {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
       },
     });
     if (response.ok) {
+      document.location.replace('/blogs/pcgaming')
     }
     else {
       alert(response.statusText);
@@ -75,13 +81,14 @@ const homeDirect = async () => {
 
   const playDirect = async () => {
     console.log("Play Button Clicked!");
-    const response = await fetch('/gaming/playstat', {
+    const response = await fetch('/blogs/playstation', {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
       },
     });
     if (response.ok) {
+      document.location.replace('/blogs/playstation')
     }
     else {
       alert(response.statusText);
@@ -90,13 +97,14 @@ const homeDirect = async () => {
 
   const xboxDirect = async () => {
     console.log("Xbox Button Clicked!");
-    const response = await fetch('/gaming/xbox', {
+    const response = await fetch('/blogs/xbox', {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
       },
     });
     if (response.ok) {
+      document.location.replace('/blogs/xbox')
     }
     else {
       alert(response.statusText);
@@ -104,9 +112,9 @@ const homeDirect = async () => {
   };
 
   document.querySelector('.home-btn').addEventListener('click', homeDirect);
-  document.querySelector('.profile-btn').addEventListener('click', profileDirect);
+  //document.querySelector('.profile-btn').addEventListener('click', profileDirect);
   document.querySelector('.about-btn').addEventListener('click', aboutDirect);
   document.querySelector('.nintendo-btn').addEventListener('click', nintendoDirect);
   document.querySelector('.pcgaming-btn').addEventListener('click', pcDirect);
-  document.querySelector('.playstat-btn').addEventListener('click', playDirect);
+  document.querySelector('.playstation-btn').addEventListener('click', playDirect);
   document.querySelector('.xbox-btn').addEventListener('click', xboxDirect);
