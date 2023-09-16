@@ -55,6 +55,7 @@ footer {
   padding: 10px;
 } /*# sourceMappingURL=main.css.map */
 
+
 /* Homepage.handlebars */
 #h1-homepage {
   font-size: 10px;
@@ -155,3 +156,63 @@ body {
   margin: 0 auto;
   padding: 20px;
 }
+
+/* Login/Logout */
+.login-logo-div {
+  text-align: center;
+}
+#login-logo {
+  display: flex;
+  justify-content: center;
+    align-items: center;
+}
+
+#main-login-background{
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 50px;
+  background-color: #9e82b0;
+  box-shadow: 5px 5px 9px #0000005f;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+
+}
+.sign-in-text {
+  margin: 20px;
+  font-weight: bold;
+  color: #000000;
+  text-align: center;
+}
+.form-signin {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.745);
+  padding: 30px;
+  margin: 20px;
+}
+
+.form-floating label {
+  color: #555;
+}
+
+.form-control {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-check {
+  text-align: center;
+  font-size: 25px;
+}
+.btn-primary {
+  background-color: #56a3f5;
+  border: none;
+  margin: 20px;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+/* Center the form horizontally *
