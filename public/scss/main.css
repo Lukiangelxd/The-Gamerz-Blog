@@ -147,10 +147,9 @@ body {
 #nintendoHeader {
   color: red; /* Set the text color to red */
   font-weight: bold; /* Make the text bold */
-  font-size: 38px;
+  font-size: 36px;
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5); /* Add a shadow effect */
   text-align: center;
-  border-top: none;
 }
 .nintendoContainer {
   max-width: 800px;
@@ -158,17 +157,6 @@ body {
   padding: 20px;
 }
 
-/* font for nintendo blog */
-.text-body-emphasis{
-  font-size: 30px;
-}
-.f-5{
-  font-size: 20px;
-}
-/* Background on Nintendo */
-.py-md-5 {
-  background-color: rgb(248, 248, 248);
-}
 /* Login/Logout */
 .login-logo-div {
   text-align: center;

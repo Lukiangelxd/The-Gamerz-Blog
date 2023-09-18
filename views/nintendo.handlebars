@@ -14,18 +14,15 @@
 <div class="nintendoContainer">
 {{#each blogs as |blog|}}
   <main>
-    <div>
-    <h1 class="text-body-emphasis" >{{blog.title}}</h1> 
+    <h1 class="text-body-emphasis">{{blog.title}}</h1>
     <h2 class="fs-5 col-md-8">{{blog.User.name}}</h2>
-    </div>
-  
-    {{!-- <img src="/img/mario_maker.jpeg" width="108" height="70"> --}}
+
+    
 
     <hr class="col-3 col-md-2 mb-5">
 
     <div class="row g-5">
       <div class="col-md-6">
-        
         <h2 class="text-body-emphasis">{{blog.sub_heading}}</h2>
         <p>{{blog.post}}</p>
       </div>
@@ -34,7 +31,7 @@
         <h2 class="text-body-emphasis">Comments</h2>
        
         <div class="mb-5">
-            <a href="../examples/" class="btn btn-primary btn-lg ">Comment</a>
+            <a href="../examples/" class="btn btn-primary btn-lg px-4">Comment</a>
         </div>
         <ul class="list-unstyled ps-0">
           {{#each blog.Comments as |comment|}}
