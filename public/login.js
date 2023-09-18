@@ -41,10 +41,23 @@ const loginFormHandler = async (event) => {
     }
   };
 
-  document
-    .querySelector('.form-signin')
-    .addEventListener('submit', loginFormHandler);
-  
-  document
-    .querySelector('.form-signup')
-    .addEventListener('submit', signupFormHandler);
+
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const loginForm = document.getElementById("login-form");
+      const signupForm = document.getElementById("signup-form");
+      const toggleButton = document.getElementById("toggle-form-button");
+    
+      toggleButton.addEventListener("click", function (event) {
+        event.preventDefault();
+        if (loginForm.style.display === "block") {
+          loginForm.style.display = "none";
+          signupForm.style.display = "block";
+          toggleButton.textContent = "Switch to Login";
+        } else {
+          loginForm.style.display = "block";
+          signupForm.style.display = "none";
+          toggleButton.textContent = "Switch to Register";
+        }
+      });
+    });   
