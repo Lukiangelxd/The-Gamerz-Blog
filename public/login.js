@@ -3,6 +3,7 @@ const loginFormHandler = async (event) => {
     // Collect values from the login form
     const email = document.querySelector('.email-input').value.trim();
     const password = document.querySelector('.password-input').value.trim();
+    console.log(email,password)
     if (email && password) {
       // Send a POST request to the API endpoint
       const response = await fetch('/api/users/login', {
@@ -11,7 +12,7 @@ const loginFormHandler = async (event) => {
         headers: { 'Content-Type': 'application/json' },
       });
       if (response.ok) {
-        // If successful, redirect the browser to the homepage
+        console.log('response')
         document.location.replace('/');
       } else {
         alert(response.statusText);
@@ -41,10 +42,8 @@ const loginFormHandler = async (event) => {
     }
   };
 
-  document
+document
     .querySelector('.form-signin')
     .addEventListener('submit', loginFormHandler);
   
-  document
-    .querySelector('.form-signup')
-    .addEventListener('submit', signupFormHandler);
+document.querySelector('.form-signup').addEventListener('submit', signupFormHandler);

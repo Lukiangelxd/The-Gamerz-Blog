@@ -32,6 +32,24 @@ const homeDirect = async () => {
     }
   };
 
+  const userSearchDirect = async () => {
+    console.log("Profile Button Clicked!");
+    const params = event.target.getAttribute('data-user')
+    const url ='/profile'+params
+    const response = await fetch(url, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+    if (response.ok) {
+      document.location.replace(url)
+    }
+    else {
+      alert(response.statusText);
+    }
+  };
+
   const aboutDirect = async () => {
     console.log("About Button Clicked!");
     const response = await fetch('/about', {
@@ -112,9 +130,15 @@ const homeDirect = async () => {
   };
 
   document.querySelector('.home-btn').addEventListener('click', homeDirect);
-  //document.querySelector('.profile-btn').addEventListener('click', profileDirect);
+  document.querySelector('.profile-btn').addEventListener('click', profileDirect);
   document.querySelector('.about-btn').addEventListener('click', aboutDirect);
   document.querySelector('.nintendo-btn').addEventListener('click', nintendoDirect);
   document.querySelector('.pcgaming-btn').addEventListener('click', pcDirect);
   document.querySelector('.playstation-btn').addEventListener('click', playDirect);
   document.querySelector('.xbox-btn').addEventListener('click', xboxDirect);
+  if (document.querySelector('.user')) {
+    const userElements = document.querySelectorAll('.user')
+    userElements.forEach(function (element) {
+      element.addEventListener('click', userSearchDirect)
+    })
+  }
