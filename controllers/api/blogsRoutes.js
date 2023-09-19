@@ -38,7 +38,7 @@ router.delete('/:id', withAuth, async(req, res)=> {
         res.status(500).json(err);
       }
     });
-//route tp delete comment
+//route to delete comment
 router.delete('/comment/:id', withAuth, async(req,res)=> {
     try{
         const commentData = await Comment.destroy({
