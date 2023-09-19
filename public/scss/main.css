@@ -63,6 +63,55 @@ footer {
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
+.blog-card {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.blog-card h2 {
+  font-size: 24px;
+  margin-top: 0;
+}
+
+.blog-card h3 {
+  font-size: 18px;
+  color: #777;
+}
+
+.blog-card p {
+  font-size: 16px;
+}
+
+.comments-list {
+  list-style: none;
+  padding: 0;
+}
+
+.comments-list li {
+  margin-bottom: 10px;
+}
+
+.comment-user {
+  font-weight: bold;
+}
+
+.comment-link {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  text-decoration: none;
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.comment-link:hover {
+  background-color: #0056b3;
+}
 /* About Page */
 body {
   margin: 0;
