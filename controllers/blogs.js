@@ -13,7 +13,13 @@ router.get('/playstation', withAuth, async(req, res) => {
                 },
                 {
                     model: Comment,
-                    attributes: ['comment']
+                    attributes: ['comment','user_id'],
+                    include: [
+                        {
+                            model: User,
+                            attributes: ['name']
+                        }
+                    ]
                 }
             ]
         });
@@ -37,7 +43,13 @@ router.get('/xbox', withAuth, async(req, res) => {
                 },
                 {
                     model: Comment,
-                    attributes: ['comment']
+                    attributes: ['comment','user_id'],
+                    include: [
+                        {
+                            model: User,
+                            attributes: ['name']
+                        }
+                    ]
                 }
             ]
         });
@@ -61,7 +73,13 @@ router.get('/pcgaming', withAuth, async(req, res) => {
                 },
                 {
                     model: Comment,
-                    attributes: ['comment']
+                    attributes: ['comment','user_id'],
+                    include: [
+                        {
+                            model: User,
+                            attributes: ['name']
+                        }
+                    ]
                 }
             ]
         });
@@ -90,7 +108,8 @@ router.get('/nintendo',withAuth, async(req, res) => {
                         {
                             model: User,
                             attributes: ['name']
-                        }]
+                        }
+                    ]
                 }
             ]
         });
