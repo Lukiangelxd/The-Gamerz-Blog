@@ -47,13 +47,12 @@ router.delete('/comment:id', withAuth, async(req,res)=> {
     }
 })
 
-
+// POST request to make comments.
+// Note: Currently non-functional, due to lack of blogpost-id.
 router.post('/comment',withAuth, async(req, res)=> {
     try {
-        const{ commentText, blog_post_id } =req.body;
-
-        const user_id =req.session.user_id;
-
+        const{ commentText, blog_post_id } = req.body;
+        const user_id = req.session.user_id;
         const commentData = await Comment.create({
             comment: commentText,
             user_id,
@@ -66,4 +65,4 @@ router.post('/comment',withAuth, async(req, res)=> {
 })
 
 
-module.exports= router 
+module.exports= router;
