@@ -6,7 +6,6 @@
     <a href="/blogs/nintendo" class="d-flex align-items-center text-decoration-none"></a>
       <img class="me-2" width="65" height="65" src="/img/nitendologo.jpg"></img>
       <span class="fs-4">Nintendo</span>
-      
     </a>
   </header>
 
@@ -16,7 +15,7 @@
   <main>
     <h1 class="text-body-emphasis">{{blog.title}}</h1>
     <h2 class="fs-5 col-md-8">{{blog.User.name}}</h2>
-
+    <h3 class="fs-5 col-md-8">{{blog.id}}</h3>
     
 
     <hr class="col-3 col-md-2 mb-5">
@@ -31,8 +30,6 @@
         <h2 class="text-body-emphasis">Comments</h2>
        
         <div class="mb-5">
-            <a href="../examples/" class="btn btn-primary btn-lg px-4">Comment</a>
-        </div>
         <ul class="list-unstyled ps-0">
           {{#each blog.Comments as |comment|}}
           <li>
@@ -44,6 +41,30 @@
           </li>
           {{/each}}
         </ul>
+        {{!-- Comment Post Modal --}}
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target=".commentModal{{blog.id}}">
+          Post a comment to this Blog?
+        </button>
+        <!-- Modal -->
+        <div class="modal fade commentModal{{blog.id}}" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Make a Comment</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <form class="new-comment-form" data-blog="{{blog.id}}">
+                  <div class="form-group">
+                    <label for="comment">Comment</label>
+                    <input type="post" class="form-control" id="comment" placeholder="Comment here!" rows="4">
+                  </div>
+                    <button type="submit" class="btn btn-primary btn-comment mb-2">Submit Comment</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>        
       </div>
     </div>
   </main>
@@ -53,3 +74,6 @@
     Created by Conal, Hailey, Hannah, and Zach &middot; &copy; 2023
   </footer>
 </div>
+
+  <script src="/blogPosting.js"></script>
+  <script src="/commentPosting.js"></script>

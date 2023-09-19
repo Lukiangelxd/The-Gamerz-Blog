@@ -1,18 +1,18 @@
 // Handler for posting new Comments.
 const newCommentHandler = async (event) => { 
     event.preventDefault();
-    //Note: Queryselector are generic names subject to change based on actual html design.
-    const comment = document.querySelector('#comment').value.trim();
-    if(comment) {
-        const response = await fetch('/api/blogs', {
+    //Note: Queryselector generic names subject to change based on actual html design.
+    const commentText = event.target.querySelector('#comment').value.trim();
+    const blog_post_id = event.target.getAttribute("data-blog");
+    if(comment && blog_post_id) {
+        const response = await fetch('/api/blogs/comment', {
             method: 'POST',
-            body: JSON.stringify({comment}),
+            body: JSON.stringify({commentText, blog_post_id}),
             headers: {
                 'Content-Type': 'application/json',
             },
         });
         if(response.ok) {
-            document.location.replace('/api/user');
         }
         else {
             alert(response.statusText);
@@ -20,6 +20,6 @@ const newCommentHandler = async (event) => {
     }
 }
 
-document
-  .querySelector('.new-comment-form')
-  .addEventListener('submit', newCommentHandler);
+document.querySelectorAll('.new-comment-form').forEach(commentButton => {
+    commentButton.addEventListener('submit', newCommentHandler);
+});
