@@ -25,7 +25,7 @@ const homeDirect = async () => {
       },
     });
     if (response.ok) {
-
+      document.location.replace('/profile')
     }
     else {
       alert(response.statusText);

@@ -1,24 +1,27 @@
 {{!--Grey--}}
 <section>
-    <h1>{{{user.name}}}</h1>
+    <h1>{{user.name}}</h1>
     <h2> Blog Posts </h2>
             {{!-- All the user's blogs --}}
-    {{#each user.blogposts as |blogpost|}}
+    {{#each user.BlogPosts as |blogpost|}}
     <div>
-        {{{blogpost.title}}}
+        {{blogpost.title}}
         <div>
-            {{{blogpost.post}}}
+            {{blogpost.post}}
         </div>
+        <button type="button" class="btn btn-secondary btn-delete-post" data-blog_id="{{blogpost.id}}">DELETE</button>
     </div>
     {{/each}}
     <h2> Comments </h2>
             {{!-- All the user's comments --}}
-    {{#each user.comments as |comment|}}
+    {{#each user.Comments as |comment|}}
     <div>
-        {{{comment.blog_post_id}}}
+        {{comment.blog_post_id}}
         <div>
-            {{{comment.comment}}}
+            {{comment.comment}}
         </div>
+        <button type="button" class="btn btn-secondary btn-delete-comment" data-comment_id="{{comment.id}}">DELETE</button>
     </div>
     {{/each}}
 </section>
+<script src="profile.js"></script>
