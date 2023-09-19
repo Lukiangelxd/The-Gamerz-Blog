@@ -1,9 +1,9 @@
 const Sequelize = require('sequelize');
-// gets neccesarry info for sequalize from .env
+// gets necessarry info for sequelize from .env
 require('dotenv').config();
 
 let sequelize;
-//if theres a jawsdb initializes swqualize there if not then at localhost
+//if theres a jawsdb initializes sequelize there if not then at localhost
 if (process.env.JAWSDB_URL) {
   sequelize = new Sequelize(process.env.JAWSDB_URL);
 } else {
