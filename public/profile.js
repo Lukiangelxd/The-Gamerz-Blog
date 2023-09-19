@@ -1,7 +1,7 @@
 //delete rquest to remove post
 const deletePost = async (event) => {
     event.preventDefault();
-    //gets the idea number from the data attribute for the request
+    //gets the id number from the data attribute for the request
     const params = event.target.getAttribute('data-blog_id')
     const url ='/api/blogs/'+params
     const response = await fetch(url, {
