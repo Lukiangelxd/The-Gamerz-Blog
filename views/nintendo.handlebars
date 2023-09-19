@@ -56,7 +56,6 @@
                 <ul class="comments-list">
                     {{#each blog.Comments as |comment|}}
                         <li>
-                          <p>{{comment.User.name}}</p>
                             <span class="comment-user user" data-user="{{comment.user_id}}">{{comment.User.name}}:</span>
                             <span class="comment-text">{{comment.comment}}</span>
                         </li>
