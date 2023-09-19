@@ -22,12 +22,6 @@ router.get('/', async(req,res)=> {
     }
 });
 
-//Get Request to access the Posting page.
-// Move this later. It's only here for testing purposes. - Conal.
-router.get('/posting', async(req,res)=> {
-        res.render('posting');
-});
-
 //Get Request for the profile page.
 router.get('/profile',withAuth, async (req,res) => {
     try{
@@ -49,7 +43,7 @@ router.get('/profile',withAuth, async (req,res) => {
         res.status(500).json(err)
     };
 })
-
+//profile page of a different user
 router.get('/profile:id', async (req,res) => {
     try{
         const userData = await User.findByPk(req.params.id, {

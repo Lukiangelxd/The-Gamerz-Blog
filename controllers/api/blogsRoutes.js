@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const withAuth = require('../../helpers/auth')
 const { Comment, BlogPost } = require('../../models');
-
+//route to create blog
 router.post('/', withAuth, async (req, res)=> {
      try{
         const {title, subHeading, post, tags, platform_id}= req.body;
@@ -18,7 +18,7 @@ router.post('/', withAuth, async (req, res)=> {
         res.status(500).json(err)
      }
 });
-
+//route to delete blog
 router.delete('/:id', withAuth, async(req, res)=> {
     try {
         const blogData = await BlogPost.destroy({
@@ -38,6 +38,7 @@ router.delete('/:id', withAuth, async(req, res)=> {
         res.status(500).json(err);
       }
     });
+//route tp delete comment
 router.delete('/comment/:id', withAuth, async(req,res)=> {
     try{
         const commentData = await Comment.destroy({
@@ -53,7 +54,6 @@ router.delete('/comment/:id', withAuth, async(req,res)=> {
 })
 
 // POST request to make comments.
-// Note: Currently non-functional, due to lack of blogpost-id.
 router.post('/comment',withAuth, async(req, res)=> {
     try {
         const{ commentText, blog_post_id } = req.body;
