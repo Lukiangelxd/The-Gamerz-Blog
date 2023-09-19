@@ -11,12 +11,11 @@ This blog on the Home page for this Blog we created a homepage where all the blo
 The following screenshots show the web application's appearance and functionality of The Gamerz Blog:
 
 This screenshot displays the initial view of this blog :
-https://user-images.githubusercontent.com/126025611/269110227-f020847b-3cce-4d3f-840d-5ff7ab2b6b58.png
+![image](https://github.com/Lukiangelxd/The-Gamerz-Blog/assets/132403931/3dc6b465-7b06-4cb3-b840-5ad05e23d7e9)
 This screenshots displays the final outcome of using this app :
-https://user-images.githubusercontent.com/126025611/269110384-74a2048d-6a44-4900-ae43-1aa73881ee97.png
-https://user-images.githubusercontent.com/126025611/269110457-f68b0c01-a3ce-4b2a-bace-fc3f365dfc73.png
-https://user-images.githubusercontent.com/126025611/269110503-7ae47efa-b565-466d-81c7-491db678b866.png
-
+![image](https://github.com/Lukiangelxd/The-Gamerz-Blog/assets/132403931/4cebea65-ee9a-4936-98b0-997b8c83df5a)
+![image](https://github.com/Lukiangelxd/The-Gamerz-Blog/assets/132403931/6d305d3f-2b81-474c-9b28-81405bd02f9c)
+![image](https://github.com/Lukiangelxd/The-Gamerz-Blog/assets/132403931/3f105388-93e0-4070-9cb1-65f99cfd2aad)
 ## Installation
 
 This site was deployed using github pages.
