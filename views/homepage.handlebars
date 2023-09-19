@@ -9,7 +9,7 @@
         {{#each blogs as |blog|}}
             <article class="blog-card">
                 <h2>{{blog.title}}</h2>
-                <h3>By {{blog.User.name}}</h3>
+                <h3 class="user" data-user="{{blog.user_id}}">By {{blog.User.name}}</h3>
                 <p>{{blog.sub_heading}}</p>
                 <p>{{blog.post}}</p>
 
@@ -17,7 +17,7 @@
                 <ul class="comments-list">
                     {{#each blog.Comments as |comment|}}
                         <li>
-                            <span class="comment-user">{{comment.User.name}}:</span>
+                            <span class="comment-user user" data-user="{{comment.user_id}}">{{comment.User.name}}:</span>
                             <span class="comment-text">{{comment.comment}}</span>
                         </li>
                     {{/each}}
