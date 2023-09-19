@@ -11,7 +11,7 @@ This blog on the Home page for this Blog we created a homepage where all the blo
 The following screenshots show the web application's appearance and functionality of The Gamerz Blog:
 
 This screenshot displays the initial view of this blog :
-![image](https://github.com/Lukiangelxd/The-Gamerz-Blog/assets/132403931/3dc6b465-7b06-4cb3-b840-5ad05e23d7e9)
+![image](https://github.com/Lukiangelxd/The-Gamerz-Blog/assets/132403931/35af3634-e621-4fa8-9999-aea97097559d)
 This screenshots displays the final outcome of using this app :
 ![image](https://github.com/Lukiangelxd/The-Gamerz-Blog/assets/132403931/4cebea65-ee9a-4936-98b0-997b8c83df5a)
 ![image](https://github.com/Lukiangelxd/The-Gamerz-Blog/assets/132403931/6d305d3f-2b81-474c-9b28-81405bd02f9c)
