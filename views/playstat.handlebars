@@ -1,17 +1,48 @@
 <!--Blue and white-->
-    <div class="col-lg-8 mx-auto p-4 py-md-5">
+<div class="col-lg-8 mx-auto p-4 py-md-5">
   <header class="pb-3" id="nintendoHeader">
     <a href="/blogs/nintendo" class="d-flex align-items-center text-decoration-none"></a>
       <img class="me-2" width="65" height="65" src="/img/nitendologo.jpg"></img>
-      <span class="fs-4">Welcome to the PlayStation Blog!</span>
-      
+      <span class="fs-4">Playstation</span>
     </a>
   </header>
+  
+<button type="submit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target=".postingModal" >Post</button>
 
-<button type="submit">Post</button>
+<div class="modal fade postingModal" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5">Create a post</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form class="new-blog-post-form" data-platform=3>
+          <div class="form-group">
+            <label for="title">Title</label>
+            <input type="title" class="form-control" id="blog-title" placeholder="Title">
+          </div>
+          <div class="form-group">
+            <label for="subheading">Subheading</label>
+            <input type="subheading" class="form-control" id="blog-subheading" placeholder="Subheading">
+          </div>
+          <div class="form-group">
+            <label for="post">Post</label>
+            <input type="post" class="form-control" id="blog-post" placeholder="Post here!" rows="4">
+          </div>
+          <div class="form-group">
+            <label for="tag">Tag</label>
+            <input type="tag" class="form-control" id="blog-tags" placeholder="Add a Tag here!">
+          </div>
+            <button type="submit" class="btn btn-primary btn-blog mb-2">Submit Blog</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
 
 <div class="blog-container">
-        <!-- Loop through ALL Playstation blog entries -->
+        <!-- Loop through ALL blog entries -->
         {{#each blogs as |blog|}}
             <article class="blog-card">
                 <h2>{{blog.title}}</h2>
@@ -28,10 +59,34 @@
                         </li>
                     {{/each}}
                 </ul>
-                <a href="../examples/" class="comment-link">Comment</a>
-            </article>
-        {{/each}}
+                 {{!-- Comment Post Modal --}}
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target=".commentModal{{blog.id}}">
+                  Post a comment to this Blog?
+                </button>
+                <!-- Modal -->
+                <div class="modal fade commentModal{{blog.id}}" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Make a Comment</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <form class="new-comment-form" data-blog="{{blog.id}}">
+                          <div class="form-group">
+                           <label for="comment">Comment</label>
+                           <input type="post" class="form-control" id="comment" placeholder="Comment here!" rows="4">
+                          </div>
+                          <button type="submit" class="btn btn-primary btn-comment mb-2">Submit Comment</button>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+          </article>
+        {{/each}} 
     </div>
-     <footer class="pt-5 my-5 text-body-secondary border-top">
-    Created by Conal, Hailey, Hannah, and Zach &middot; &copy; 2023
-  </footer>
+</div>
+
+  <script src="/blogPosting.js"></script>
+  <script src="/commentPosting.js"></script>

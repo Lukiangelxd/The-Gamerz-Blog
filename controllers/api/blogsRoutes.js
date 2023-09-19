@@ -4,8 +4,13 @@ const { Comment, BlogPost } = require('../../models');
 
 router.post('/', withAuth, async (req, res)=> {
      try{
+        const {title, subHeading, post, tags, platform_id}= req.body;
         const blogData = await BlogPost.create({
-            ...req.body,
+        title: title,
+        sub_heading: subHeading,
+        post: post,
+        tags: tags,
+        platform_id: platform_id,
         user_id: req.session.user_id});
         res.status(200).json(blogData)
 
