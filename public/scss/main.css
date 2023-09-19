@@ -1,9 +1,4 @@
-/* Reset some default browser styles */
-/* Set variables for common colors and fonts */
-/* Apply variables to specific elements */
-
-/* main.handlebars */
-
+/* All Pages*/
 *,
 *:before,
 *:after {
@@ -12,23 +7,26 @@
 html {
   box-sizing: border-box;
 }
-
 body {
-  background-color: #fefefe;
+  background-color: #fbfdf9; /* Light greenish background */
   font-family: "Times New Roman", Times, serif;
-  margin: 0;
+  justify-content: center;
+  align-items: center;
 }
+
+
+/* Main Container Styles */
 #main-container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #ededed;
-  box-shadow: 5px 5px 9px #0000005f;
+  background-color: #f0f5ff; /* Light blue background */
+  box-shadow: 5px 5px 9px rgba(0, 0, 0, 0.3);
 }
 
-/* Moving the logo closer to the middle */
+/* Logo and Navbar Styles */
 #logo-nav {
-  width: 100px; /* Adjust the width as needed */
+  width: 100px;
   height: auto;
   border-left-width: 20px;
   border-right-width: 20px;
@@ -36,93 +34,93 @@ body {
   margin-left: 20px;
   align-items: center;
 }
-/* Nav Bar add ons */
+
+/* Navbar Background */
 #navbar {
-  background-image: linear-gradient(rgb(161, 158, 160), rgb(240, 237, 240));
+  background-image: linear-gradient(to bottom, #5fd9e5, #388ea4); /* Gradient from light blue to darker blue */
 }
+
+/* Navbar Link Hover Effect */
 .nav-link .box:hover {
-  box-shadow: 0 0 11px rgb(0, 0, 0);
+  box-shadow: 0 0 11px rgba(255, 99, 71, 0.7); /* Reddish shadow on hover */
 }
+
+/* Navbar Items Styles */
 #navbarItems {
   justify-content: center;
   font-size: 30px;
   margin: 20px;
 }
+
+/* Footer Styles */
 footer {
-  background-color: #333;
-  color: #fff;
+  background-color: #ff5733; /* Reddish-orange footer background */
+  color: white;
   text-align: center;
   padding: 10px;
-} /*# sourceMappingURL=main.css.map */
-
-
-/* Homepage.handlebars */
-#h1-homepage {
-  font-size: 10px;
-  color: coral;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
-.blog-card {
+/* Homepage Title Styles */
+#h1-homepage {
+  font-size: 36px; /* Larger font size */
+  color: #d68bff; /* lilac color */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Slight text shadow */
+}
+
+/* Blog Card Styles */
+.blog-card-home {
   border: 1px solid #ccc;
   padding: 20px;
-  margin: 20px;
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 75px;
+  background-color: #f0f5ff; /* Light blue card background */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-
 .blog-card h2 {
   font-size: 24px;
   margin-top: 0;
+  color: #337ab7; /* Dark blue heading color */
 }
-
 .blog-card h3 {
   font-size: 18px;
   color: #777;
 }
-
 .blog-card p {
   font-size: 16px;
+  color: #333; /* Dark gray text color */
 }
 
+
+/* Comments Styles */
 .comments-list {
   list-style: none;
   padding: 0;
 }
-
 .comments-list li {
   margin-bottom: 10px;
 }
-
 .comment-user {
   font-weight: bold;
+  color: #ff5733; /* Reddish-orange user name */
 }
-
 .comment-link {
   display: block;
   text-align: center;
   margin-top: 10px;
   text-decoration: none;
-  background-color: #007bff;
-  color: #fff;
+  background-color: #ff9a8b; /* Coral comment link background */
+  color: white;
   padding: 10px 20px;
   border-radius: 5px;
 }
-
 .comment-link:hover {
-  background-color: #0056b3;
+  background-color: #ff3200; /* Darker coral on hover */
 }
+
+
 /* About Page */
 body {
   margin: 0;
 }
-
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-}
-
 .main-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -131,7 +129,6 @@ body {
   box-shadow: 5px 5px 9px #0000005f;
   height: 100%;
 }
-
 .about-h1 {
   text-shadow: 5px 5px 9px #000000;
 }
@@ -140,14 +137,14 @@ body {
   padding: 50px;
   margin: 0;
 }
-/* Ensuring it can fit all 4 on larger screens */
+/*About Page: Even fit on large screen*/
 .column {
   float: left;
   width: 50%;
   margin-bottom: 16px;
   padding: 0 8px;
 }
-/*For all Developers  */
+/*About Page: For all Developers  */
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   margin: 8px;
@@ -155,7 +152,7 @@ body {
 .about-section {
   padding: 50px;
   text-align: center;
-  background-color: #695a80;
+  background-color: #957fb5;
   box-shadow: 5px 5px 9px #00000052;
   color: white;
 }
@@ -179,11 +176,9 @@ body {
   transition: color 0.3s;
   margin-bottom: 10px;
 }
-
 #linkGitHub:hover {
   color: #007bff;
 }
-
 @media screen and (max-width: 650px) {
   .column {
     width: 100%;
@@ -191,32 +186,320 @@ body {
   }
 }
 
-/* Nintendo */
 
+/* Navbar Items Styles */
+#navbarItems {
+  justify-content: center;
+  font-size: 30px;
+  margin: 20px;
+}
+
+
+/* Homepage Title Styles */
+.h1-homepage {
+  font-size: 75px;
+  margin-top: 50px;
+  margin-bottom: 0px;
+  text-align: center;
+  color: #2192a6; /* Coral color */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Slight text shadow */
+}
+.blog-container {
+
+
+}
+
+/* Blog Card Styles */
+.blog-card {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 20px;
+  background-color: #f0f5ff; /* Light blue card background */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s;
+}
+.blog-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+.blog-card h2 {
+  font-size: 24px;
+  margin-top: 10px;
+  color: #056c79;
+  transition: color 0.2s;
+}
+.blog-card:hover h2 {
+  color: #53b0e3;
+  cursor: pointer;
+}
+.blog-card h3 {
+  font-size: 18px;
+  color: #489eaf99;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.blog-card p {
+  font-size: 16px;
+  color: #333; /* Dark gray text color */
+}
+
+
+/* Comments Styles */
+.comments-list {
+  list-style: none;
+  padding: 0;
+}
+.comments-list li {
+  margin-bottom: 10px;
+}
+.comment-link {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  text-decoration: none;
+  background-color: #43c9d1;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+.comment-link:hover {
+  background-color: #2d9fa7; /* Darker coral on hover */
+}
+
+
+/* Nintendo Theme Styles */
 #nintendoHeader {
-  color: red; /* Set the text color to red */
-  font-weight: bold; /* Make the text bold */
-  font-size: 36px;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5); /* Add a shadow effect */
+  background-color: #ffffff;
+  color: #d71818;
+  padding: 1rem;
   text-align: center;
 }
-.nintendoContainer {
+#nintendo-comment {
+  font-weight: bold;
+  color: #c42516;
+}
+#nintendo-btn-primary {
+  background-color: #d21111;
+  border: none;
+  font-weight: bold;
+  color: #ffffff; 
+}
+#nintendo-blog-card {
+    border: 2px solid #e10707;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+  }
+#nintendo-blog-card h2 {
+  font-size: 24px;
+  color: #df3000;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+#nintendo-comment-user {
+  font-weight: bold;
+  color: #720000;
+}
+
+#nintendo-blog-card p {
+  font-size: 16px;
+  color: #333;
+}
+
+
+
+/* PlayStation */
+#playstationHeader {
+  background-color: #003791;
+  color: #ffffff;
+  padding: 1rem;
+  text-align: center;
+}
+#playstat-comment {
+  font-weight: bold;
+  color: #003791;
+}
+#playstation-btn-primary {
+  background-color: #003791;
+  border: none;
+  font-weight: bold;
+  color: #ffffff; 
+}
+#playstation-blog-card {
+    border: 2px solid #003791;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+  }
+#playstation-blog-card h2 {
+  font-size: 24px;
+  color: #003791;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+#playstation-comment-user {
+  font-weight: bold;
+  color: #2a63bf;
+}
+#playstation-blog-card p {
+  font-size: 16px;
+  color: #333;
+}
+
+/* XBOX */
+#xboxHeader {
+  background-color: #2dad11;
+  color: #ffffff;
+  padding: 1rem;
+  text-align: center;
+}
+#xbox-comment {
+  font-weight: bold;
+  color: #227417;
+}
+#xbox-btn-primary {
+  background-color: #239a25;
+  border: none;
+  font-weight: bold;
+  color: #ffffff; 
+}
+#xbox-blog-card {
+    border: 2px solid #11bc0e;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+  }
+#xbox-blog-card h2 {
+  font-size: 24px;
+  color: #3ab73e;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+#xbox-comment-user {
+  font-weight: bold;
+  color: #0c5c19;
+}
+#xbox-blog-card p {
+  font-size: 16px;
+  color: #333;
+}
+
+/* PC */
+#pcHeader {
+  background-color: #a523bf;
+  color: #ffffff;
+  padding: 1rem;
+  text-align: center;
+}
+#pc-comment {
+  font-weight: bold;
+  color: #840a7e;
+}
+#pc-btn-primary {
+  background-color: #b42fa6;
+  border: none;
+  font-weight: bold;
+  color: #ffffff; 
+}
+#pc-blog-card {
+    border: 2px solid #bc0eb9;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+  }
+#pc-blog-card h2 {
+  font-size: 24px;
+  color: #b33ab7;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+#pc-comment-user {
+  font-weight: bold;
+  color: #570d70;
+}
+#pc-blog-card p {
+  font-size: 16px;
+  color: #333;
+}
+
+/* Profile */
+#profile-section {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
+  background-color: #f0f0f0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+#profile-h1 {
+  font-size: 40px;
+  color: #333;
+  text-align: center;
+  margin-bottom: 10px;
 }
 
+#profile-h2 {
+  font-size: 24px;
+  color: #555;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+/* Blog Post and Comment Styles */
+#profile-div {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+/* Delete Button*/
+.btn-secondary {
+  background-color: #337ab7;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#profile-btn-secondary:hover {
+  background-color: #23527c;
+}
+
+#profile-body {
+  background-color: #f5f5f5; /* Light background for the entire page */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+
+
 /* Login/Logout */
-.login-logo-div {
+    .login-logo-div {
   text-align: center;
 }
-#login-logo {
+    #login-logo {
   display: flex;
   justify-content: center;
     align-items: center;
 }
-
-#main-login-background{
+    #main-login-background{
   max-width: 1000px;
   margin: 50px auto;
   padding: 50px;
@@ -227,29 +510,26 @@ body {
   align-items: center;
 
 }
-.sign-in-text {
+    .sign-in-text {
   margin: 20px;
   font-weight: bold;
   color: #000000;
   text-align: center;
 }
-.form-signin {
+    .form-signin {
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.745);
   padding: 30px;
   margin: 20px;
 }
-
-.form-floating label {
+  .form-floating label {
   color: #555;
 }
-
 .form-control {
   border: 1px solid #ccc;
   border-radius: 5px;
 }
-
 .form-check {
   text-align: center;
   font-size: 25px;
@@ -259,9 +539,15 @@ body {
   border: none;
   margin: 20px;
 }
-
 .btn-primary:hover {
   background-color: #0056b3;
 }
 
-/* Center the form horizontally *
+
+/* Footer Styles */
+footer {
+  background-color: #1c8f9a; /* Reddish-orange footer background */
+  color: white;
+  text-align: center;
+  padding: 10px;
+}

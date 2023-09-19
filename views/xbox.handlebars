@@ -1,12 +1,14 @@
+{{!-- Green and White --}}
+<body class="main-container">
 <div class="col-lg-8 mx-auto p-4 py-md-5">
-  <header class="pb-3" id="nintendoHeader">
-    <a href="/blogs/xbox" class="d-flex align-items-center text-decoration-none"></a>
-      <img class="me-2" width="65" height="65" src="/img/xbox_logo.jpeg"></img>
+  <header class="pb-3" id="xboxHeader">
+    <a href="/blogs/nintendo" class="d-flex align-items-center text-decoration-none"></a>
+      <img class="me-2" width="65" height="65" src="/img/Xbox_one_logo.svg.png"></img>
       <span class="fs-4">Xbox</span>
     </a>
   </header>
   
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target=".postingModal" >Post</button>
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" id="xbox-btn-primary" data-bs-target=".postingModal" >Post</button>
 
 <div class="modal fade postingModal" aria-hidden="true">
   <div class="modal-dialog">
@@ -43,7 +45,8 @@
 <div class="blog-container">
         <!-- Loop through ALL blog entries -->
         {{#each blogs as |blog|}}
-            <article class="blog-card">
+            <article class="blog-card"
+              id="xbox-blog-card">
                 <h2>{{blog.title}}</h2>
                 <h3 class="user" data-user="{{blog.user_id}}">By {{blog.User.name}}</h3>
                 <p>{{blog.sub_heading}}</p>
@@ -53,13 +56,13 @@
                 <ul class="comments-list">
                     {{#each blog.Comments as |comment|}}
                         <li>
-                            <span class="comment-user user" data-user="{{comment.user_id}}">{{comment.User.name}}:</span>
+                            <span class="comment-user user" id="nintendo-comment-user" data-user="{{comment.user_id}}">{{comment.User.name}}:</span>
                             <span class="comment-text">{{comment.comment}}</span>
                         </li>
                     {{/each}}
                 </ul>
                  {{!-- Comment Post Modal --}}
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target=".commentModal{{blog.id}}">
+                <button type="button" class="btn btn-primary" id= "xbox-btn-primary" data-bs-toggle="modal" data-bs-target=".commentModal{{blog.id}}">
                   Post a comment to this Blog?
                 </button>
                 <!-- Modal -->
@@ -89,3 +92,4 @@
 
   <script src="/blogPosting.js"></script>
   <script src="/commentPosting.js"></script>
+  </body>
