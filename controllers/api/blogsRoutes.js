@@ -19,7 +19,7 @@ router.post('/', withAuth, async (req, res)=> {
      }
 });
 
-router.delete(':id', withAuth, async(req, res)=> {
+router.delete('/:id', withAuth, async(req, res)=> {
     try {
         const blogData = await BlogPost.destroy({
           where: {
@@ -38,7 +38,7 @@ router.delete(':id', withAuth, async(req, res)=> {
         res.status(500).json(err);
       }
     });
-router.delete('/comment:id', withAuth, async(req,res)=> {
+router.delete('/comment/:id', withAuth, async(req,res)=> {
     try{
         const commentData = await Comment.destroy({
             where: {

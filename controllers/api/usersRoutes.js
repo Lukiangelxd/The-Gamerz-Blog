@@ -29,7 +29,12 @@ router.post('/login', async (req, res) => {
 
 router.post('/signup', async (req, res )=> {
     try {
-        const userData = await User.create(req.body);
+      const{name,email,password}=req.body
+      const userData = await User.create({
+        name: name,
+        password: password,
+        email: email
+      });
     if (!userData) {
       res
         .status(400)

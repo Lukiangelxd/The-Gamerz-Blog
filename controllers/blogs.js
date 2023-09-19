@@ -74,7 +74,7 @@ router.get('/pcgaming', withAuth, async(req, res) => {
     }
 })
 
-router.get('/nintendo', async(req, res) => {
+router.get('/nintendo',withAuth, async(req, res) => {
     try{
         const blogData = await BlogPost.findAll({
             where: {platform_id: 1},

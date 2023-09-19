@@ -29,17 +29,17 @@ router.get('/posting', async(req,res)=> {
 });
 
 //Get Request for the profile page.
-router.get('/profile', async (req,res) => {
+router.get('/profile',withAuth, async (req,res) => {
     try{
         const userData = await User.findByPk(req.session.user_id, {
             include: [
                 {
                     model: BlogPost,
-                    attributes: ['title', 'post'],
+                    attributes: ['id','title', 'post'],
                 },
                 {
                     model: Comment,
-                    attributes: ['comment', 'blog_post_id'],
+                    attributes: ['id','comment', 'blog_post_id'],
                 }
             ]
         });
