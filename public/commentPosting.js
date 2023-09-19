@@ -17,7 +17,7 @@ const newCommentHandler = async (event) => {
         }
         else {
             alert(response.statusText);
-        }      
+        }
     }
 }
 
