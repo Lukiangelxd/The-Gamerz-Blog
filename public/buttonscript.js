@@ -31,7 +31,7 @@ const homeDirect = async () => {
       alert(response.statusText);
     }
   };
-//get request for 
+//get request for selected user's profile page
   const userSearchDirect = async () => {
     console.log("Profile Button Clicked!");
     const params = event.target.getAttribute('data-user')
