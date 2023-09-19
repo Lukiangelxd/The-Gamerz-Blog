@@ -1,2 +1,28 @@
 <!--iphone rose gold color-->
 
+  <header>
+        <h1>Welcome to The Gamerz Blog</h1>
+    </header>
+
+    <div class="blog-container">
+        <!-- Loop through ALL blog entries -->
+        {{#each blogs as |blog|}}
+            <article class="blog-card">
+                <h2>{{blog.title}}</h2>
+                <h3 class="user" data-user="{{blog.user_id}}">By {{blog.User.name}}</h3>
+                <p>{{blog.sub_heading}}</p>
+                <p>{{blog.post}}</p>
+
+                <h3>Comments</h3>
+                <ul class="comments-list">
+                    {{#each blog.Comments as |comment|}}
+                        <li>
+                            <span class="comment-user user" data-user="{{comment.user_id}}">{{comment.User.name}}:</span>
+                            <span class="comment-text">{{comment.comment}}</span>
+                        </li>
+                    {{/each}}
+                </ul>
+                <a href="../examples/" class="comment-link">Comment</a>
+            </article>
+        {{/each}}
+    </div>
