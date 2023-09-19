@@ -4,7 +4,7 @@
 <div class="col-lg-8 mx-auto p-4 py-md-5">
   <header class="pb-3" id="nintendoHeader">
     <a href="/blogs/nintendo" class="d-flex align-items-center text-decoration-none"></a>
-      <img class="me-2" width="65" height="65" src="/img/nitendologo.jpg"></img>
+      <img class="me-2" width="65" height="65" src="/img/nintendo_logo.jpg"></img>
       <span class="fs-4">Nintendo</span>
     </a>
   </header>
@@ -56,6 +56,7 @@
                 <ul class="comments-list">
                     {{#each blog.Comments as |comment|}}
                         <li>
+                          <p>{{comment.User.name}}</p>
                             <span class="comment-user user" data-user="{{comment.user_id}}">{{comment.User.name}}:</span>
                             <span class="comment-text">{{comment.comment}}</span>
                         </li>
