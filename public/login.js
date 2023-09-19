@@ -43,9 +43,10 @@ const checkbox = document.getElementById('flexCheckDefault');
 const mainElement = document.getElementById('main-login-background');
 
 let  nameInputContainer;
-
+//adds event to checkbox to trigger either a login in sign up
 checkbox.addEventListener('change', function () {
     if (checkbox.checked) {
+      //creates an input field to add your name 
       mainElement.classList.replace('form-signin', 'form-signup');
       nameInputContainer = document.createElement('div');
       nameInputContainer.className = 'form-floating';
@@ -70,6 +71,7 @@ checkbox.addEventListener('change', function () {
       document.getElementById('log-in-btn').textContent='Sign Up'
     } else {
       mainElement.classList.replace('form-signup', 'form-signin');
+      //removes input field for name if it is there
       if (nameInputContainer) {
         nameInputContainer.remove();
         nameInputContainer= null;

@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const { User } = require('../../models');
-
+//route to login
 router.post('/login', async (req, res) => {
   try {
     const userData = await User.findOne({ where: { email: req.body.email } });
@@ -26,7 +26,7 @@ router.post('/login', async (req, res) => {
     res.status(400).json(err);
   }
 });
-
+//route to create new user
 router.post('/signup', async (req, res )=> {
     try {
       const{name,email,password}=req.body
@@ -68,7 +68,7 @@ router.delete('/:user_id', (req, res) =>{
     res.status(400).json("Error! Can not delete another user!");
    };
 })
-
+//destroys session when signout is clicked
 router.post('/logout', (req, res) => {
   if (req.session.logged_in) {
     req.session.destroy(() => {
